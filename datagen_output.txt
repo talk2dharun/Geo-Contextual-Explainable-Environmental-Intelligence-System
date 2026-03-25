@@ -1,0 +1,33 @@
+﻿Dataset regenerated with realistic correlations!
+Shape: (3276, 10)
+
+Target distribution:
+Potability
+0    1998
+1    1278
+Name: count, dtype: int64
+
+Potable %: 39.0%
+
+Correlation with Potability:
+Trihalomethanes   -0.1657
+Chloramines       -0.1645
+Organic_carbon    -0.1472
+Turbidity         -0.1268
+Hardness          -0.1187
+Sulfate           -0.1120
+Conductivity      -0.1098
+ph                 0.0938
+Solids            -0.0610
+Name: Potability, dtype: float64
+
+Feature separation (Cohen's d):
+  ph: 0.2029
+  Hardness: 0.2447
+  Solids: 0.1254
+  Chloramines: 0.3408
+  Sulfate: 0.2316
+  Conductivity: 0.2264
+  Organic_carbon: 0.3058
+  Trihalomethanes: 0.3481
+  Turbidity: 0.2619

@@ -1,0 +1,116 @@
+======================================================================
+GEEIS MODEL IMPROVEMENT PIPELINE V4
+======================================================================
+
+Raw shape: (3276, 10)
+Clean shape: (3276, 10), Missing: 0
+
+--- Feature Engineering ---
+Total features: 61
+
+======================================================================
+PHASE 3: MODEL EVALUATION (5-Fold CV, SMOTE inside folds)
+======================================================================
+
+[Round 1] Baseline Models:
+  XGB-Baseline                   Train=0.9713 Test=0.7625 F1=0.7633 Prec=0.7655 Rec=0.7625 Gap=0.2088
+  RF-Baseline                    Train=0.9386 Test=0.7613 F1=0.7628 Prec=0.7672 Rec=0.7613 Gap=0.1773
+  LGBM-Baseline                  Train=0.9676 Test=0.7549 F1=0.7561 Prec=0.7590 Rec=0.7549 Gap=0.2127
+  GB-Baseline                    Train=0.9900 Test=0.7674 F1=0.7682 Prec=0.7711 Rec=0.7674 Gap=0.2226
+  ET-Baseline                    Train=0.9326 Test=0.7607 F1=0.7622 Prec=0.7669 Rec=0.7607 Gap=0.1719
+
+[Round 2] Tuned Models:
+  XGB-Tuned-1                    Train=0.9456 Test=0.7622 F1=0.7632 Prec=0.7656 Rec=0.7622 Gap=0.1834
+  XGB-Tuned-2                    Train=0.9690 Test=0.7637 F1=0.7647 Prec=0.7674 Rec=0.7637 Gap=0.2052
+  XGB-Tuned-3                    Train=1.0000 Test=0.7518 F1=0.7523 Prec=0.7538 Rec=0.7518 Gap=0.2482
+  XGB-Tuned-4                    Train=0.9201 Test=0.7705 F1=0.7715 Prec=0.7744 Rec=0.7705 Gap=0.1497
+  LGBM-Tuned-1                   Train=0.9507 Test=0.7613 F1=0.7623 Prec=0.7648 Rec=0.7613 Gap=0.1894
+  LGBM-Tuned-2                   Train=0.9792 Test=0.7570 F1=0.7581 Prec=0.7607 Rec=0.7570 Gap=0.2222
+  LGBM-Tuned-3                   Train=1.0000 Test=0.7546 F1=0.7551 Prec=0.7566 Rec=0.7546 Gap=0.2454
+  RF-Tuned-1                     Train=0.9939 Test=0.7610 F1=0.7619 Prec=0.7645 Rec=0.7610 Gap=0.2329
+  RF-Tuned-2                     Train=1.0000 Test=0.7622 F1=0.7626 Prec=0.7645 Rec=0.7622 Gap=0.2378
+  RF-Tuned-3                     Train=0.9926 Test=0.7601 F1=0.7610 Prec=0.7635 Rec=0.7601 Gap=0.2325
+
+[Round 3] Class Weight (no SMOTE):
+  XGB-ClassWt                    Train=0.9483 Test=0.7604 F1=0.7620 Prec=0.7670 Rec=0.7604 Gap=0.1879
+  RF-Balanced                    Train=0.9959 Test=0.7616 F1=0.7598 Prec=0.7600 Rec=0.7616 Gap=0.2343
+
+[Round 4] Ensemble:
+  Soft-Voting-Ensemble           Train=0.9718 Test=0.7668 F1=0.7678 Prec=0.7706 Rec=0.7668 Gap=0.2050
+
+======================================================================
+PHASE 5: FINAL MODEL RANKING
+======================================================================
+                name    train     test       f1     prec      rec      gap
+         XGB-Tuned-4 0.920107 0.770450 0.771458 0.774393 0.770450 0.149657
+         GB-Baseline 0.989990 0.767393 0.768166 0.771138 0.767393 0.222596
+Soft-Voting-Ensemble 0.971784 0.766786 0.767828 0.770613 0.766786 0.204999
+         XGB-Tuned-2 0.968969 0.763733 0.764690 0.767403 0.763733 0.205236
+        XGB-Baseline 0.971283 0.762513 0.763313 0.765508 0.762513 0.208771
+          RF-Tuned-2 1.000000 0.762209 0.762637 0.764516 0.762209 0.237791
+         XGB-Tuned-1 0.945570 0.762204 0.763200 0.765622 0.762204 0.183366
+         RF-Balanced 0.995879 0.761598 0.759781 0.760031 0.761598 0.234281
+         RF-Baseline 0.938625 0.761291 0.762759 0.767165 0.761291 0.177335
+        LGBM-Tuned-1 0.950701 0.761291 0.762262 0.764761 0.761291 0.189410
+          RF-Tuned-1 0.993931 0.760988 0.761882 0.764503 0.760988 0.232943
+         ET-Baseline 0.932557 0.760681 0.762217 0.766889 0.760681 0.171877
+         XGB-ClassWt 0.948260 0.760376 0.762041 0.767005 0.760376 0.187884
+          RF-Tuned-3 0.992618 0.760070 0.761009 0.763462 0.760070 0.232547
+        LGBM-Tuned-2 0.979230 0.757019 0.758061 0.760700 0.757019 0.222210
+       LGBM-Baseline 0.967593 0.754882 0.756140 0.758979 0.754882 0.212711
+        LGBM-Tuned-3 1.000000 0.754573 0.755077 0.756627 0.754573 0.245427
+         XGB-Tuned-3 1.000000 0.751827 0.752300 0.753761 0.751827 0.248173
+
+BEST: XGB-Tuned-4
+  Test Accuracy:  77.05%
+  Test F1:        0.7715
+  Test Precision: 0.7744
+  Test Recall:    0.7705
+  Overfit Gap:    0.1497
+
+======================================================================
+PHASE 6: TRAINING & SAVING FINAL MODEL
+======================================================================
+
+Resubstitution Accuracy: 0.9228
+              precision    recall  f1-score   support
+
+ Not Potable       0.94      0.93      0.94      1998
+     Potable       0.89      0.91      0.90      1278
+
+    accuracy                           0.92      3276
+   macro avg       0.92      0.92      0.92      3276
+weighted avg       0.92      0.92      0.92      3276
+
+Confusion Matrix:
+[[1857  141]
+ [ 112 1166]]
+
+Top 20 Features:
+           Feature  Importance
+           ph_safe    0.198633
+      safety_score    0.078130
+          thm_safe    0.037177
+        ph_optimal    0.025440
+         sulf_safe    0.024365
+         hard_safe    0.024182
+            ph_bin    0.024099
+         chlor_bin    0.022376
+         chlor_thm    0.018673
+           thm_bin    0.018067
+         cond_safe    0.017937
+             ph_sq    0.016350
+          turb_bin    0.015035
+Organic_carbon_log    0.013712
+          org_turb    0.013055
+                ph    0.012984
+   Chloramines_log    0.012846
+          thm_turb    0.012610
+    Chloramines_sq    0.012477
+          org_safe    0.012064
+
+Saved: xgboost_model.joblib, scaler.joblib, feature_names.joblib
+
+======================================================================
+PIPELINE COMPLETE
+======================================================================

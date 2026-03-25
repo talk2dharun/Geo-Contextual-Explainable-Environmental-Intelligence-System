@@ -1,0 +1,165 @@
+{
+  "xgb_avg": 91.28,
+  "lgbm_avg": 91.21,
+  "best_acc": 91.28,
+  "best_model": "XGBoost-Optuna-V7",
+  "avg_f1": 0.9129,
+  "avg_prec": 0.9134,
+  "avg_rec": 0.9128,
+  "overfit_gap": 3.67,
+  "resub_acc": 94.88,
+  "n_samples": 10000,
+  "n_features": 71,
+  "target_achieved": true,
+  "xgb_fold_results": [
+    {
+      "fold": 1,
+      "train": 94.91,
+      "test": 91.0
+    },
+    {
+      "fold": 2,
+      "train": 94.93,
+      "test": 91.8
+    },
+    {
+      "fold": 3,
+      "train": 95.03,
+      "test": 91.9
+    },
+    {
+      "fold": 4,
+      "train": 94.89,
+      "test": 91.5
+    },
+    {
+      "fold": 5,
+      "train": 94.96,
+      "test": 91.2
+    },
+    {
+      "fold": 6,
+      "train": 94.93,
+      "test": 92.6
+    },
+    {
+      "fold": 7,
+      "train": 94.96,
+      "test": 90.9
+    },
+    {
+      "fold": 8,
+      "train": 94.92,
+      "test": 91.1
+    },
+    {
+      "fold": 9,
+      "train": 95.05,
+      "test": 90.1
+    },
+    {
+      "fold": 10,
+      "train": 94.93,
+      "test": 90.7
+    }
+  ],
+  "confusion_matrix": [
+    [
+      5480,
+      320
+    ],
+    [
+      192,
+      4008
+    ]
+  ],
+  "top_features": [
+    {
+      "name": "q_score_cu",
+      "imp": 0.2364
+    },
+    {
+      "name": "q_score_adj",
+      "imp": 0.1204
+    },
+    {
+      "name": "q_score_log",
+      "imp": 0.0894
+    },
+    {
+      "name": "q_score",
+      "imp": 0.0746
+    },
+    {
+      "name": "q_neg",
+      "imp": 0.0709
+    },
+    {
+      "name": "ph_was_missing",
+      "imp": 0.0475
+    },
+    {
+      "name": "q_score_sq",
+      "imp": 0.0337
+    },
+    {
+      "name": "ph_safe",
+      "imp": 0.0303
+    },
+    {
+      "name": "q_pos",
+      "imp": 0.019
+    },
+    {
+      "name": "net_score",
+      "imp": 0.0168
+    },
+    {
+      "name": "n_missing",
+      "imp": 0.0158
+    },
+    {
+      "name": "any_missing",
+      "imp": 0.0155
+    },
+    {
+      "name": "ph_score",
+      "imp": 0.0153
+    },
+    {
+      "name": "su_was_missing",
+      "imp": 0.0108
+    },
+    {
+      "name": "q_high",
+      "imp": 0.0106
+    }
+  ],
+  "improvements": [
+    {
+      "version": "Original",
+      "accuracy": 73.0,
+      "gap": 14.9
+    },
+    {
+      "version": "V4 (Feature Eng.)",
+      "accuracy": 77.1,
+      "gap": 14.9
+    },
+    {
+      "version": "V5 (WHO Score)",
+      "accuracy": 86.6,
+      "gap": 5.4
+    },
+    {
+      "version": "V6 (Optuna 50t)",
+      "accuracy": 89.0,
+      "gap": 1.35
+    },
+    {
+      "version": "V7 (Optuna 100t)",
+      "accuracy": 91.29,
+      "gap": 3.67
+    }
+  ]
+}

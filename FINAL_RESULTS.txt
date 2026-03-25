@@ -1,0 +1,70 @@
+======================================================================
+GEEIS MODEL IMPROVEMENT - FINAL RESULTS
+======================================================================
+
+Dataset: 3276 samples, 61 features
+Target distribution: 0=1998, 1=1278
+
+5-FOLD STRATIFIED CROSS-VALIDATION (SMOTE inside each fold)
+----------------------------------------------------------------------
+Fold 1: Train=0.9190  Test=0.7759  F1=0.7782  Prec=0.7865  Rec=0.7759
+Fold 2: Train=0.9171  Test=0.7725  F1=0.7741  Prec=0.7775  Rec=0.7725
+Fold 3: Train=0.9202  Test=0.7603  F1=0.7618  Prec=0.7649  Rec=0.7603
+Fold 4: Train=0.9246  Test=0.7695  F1=0.7690  Prec=0.7687  Rec=0.7695
+Fold 5: Train=0.9196  Test=0.7740  F1=0.7742  Prec=0.7744  Rec=0.7740
+
+AVERAGE ACROSS 5 FOLDS:
+  Train Accuracy:  0.9201 (92.01%)
+  Test Accuracy:   0.7705 (77.05%)
+  Test F1 Score:   0.7715
+  Test Precision:  0.7744
+  Test Recall:     0.7705
+  Overfit Gap:     0.1497
+
+======================================================================
+FINAL MODEL (Trained on full SMOTE-augmented data)
+======================================================================
+
+Resubstitution Accuracy: 0.8965 (89.65%)
+
+Classification Report:
+              precision    recall  f1-score   support
+
+ Not Potable       0.93      0.90      0.91      1998
+     Potable       0.85      0.89      0.87      1278
+
+    accuracy                           0.90      3276
+   macro avg       0.89      0.89      0.89      3276
+weighted avg       0.90      0.90      0.90      3276
+
+Confusion Matrix:
+[[1805  193]
+ [ 146 1132]]
+
+TOP 20 MOST IMPORTANT FEATURES:
+  ph_safe: 0.201399
+  safety_score: 0.090984
+  thm_safe: 0.031096
+  ph_bin: 0.030936
+  ph_optimal: 0.028092
+  chlor_bin: 0.024021
+  hard_safe: 0.022573
+  ph_sq: 0.019953
+  thm_bin: 0.019434
+  chlor_thm: 0.019406
+  sulf_safe: 0.017738
+  ph: 0.017576
+  turb_bin: 0.016177
+  thm_turb: 0.014555
+  Organic_carbon_log: 0.014462
+  ph_dev: 0.013494
+  cond_safe: 0.012958
+  org_turb: 0.012853
+  org_safe: 0.012571
+  Chloramines_log: 0.012152
+
+Models saved to models/ directory
+
+======================================================================
+COMPLETE
+======================================================================

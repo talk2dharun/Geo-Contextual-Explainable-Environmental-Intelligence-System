@@ -1,0 +1,263 @@
+﻿python :   File "C:\Users\Dharun Kumar\AppData\Local\Progra
+ms\Python\Python310\lib\site-packages\joblib\externals\loky
+\backend\context.py", line 257, in _count_physical_cores
+At line:1 char:1
++ python improve_model.py 2>&1 | Out-File -FilePath 
+improvement_v3.txt  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "C:\Us 
+   er..._physical_cores:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\site-packages\joblib\externals\loky\backend\
+context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 501, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 966, in __init__
+    self._execute_child(args, executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar\AppData\Local\Programs\Python
+\Python310\lib\subprocess.py", line 1435, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, 
+args,

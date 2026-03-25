@@ -1,0 +1,217 @@
+﻿python :   File 
+"C:\Users\Dharun Kumar\AppDat
+a\Local\Programs\Python\Pytho
+n310\lib\site-packages\joblib
+\externals\loky\backend\conte
+xt.py", line 257, in 
+_count_physical_cores
+At line:1 char:1
++ python improve_model.py 
+2>&1 | Out-File -FilePath 
+improvement_results ...
++ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (  File   
+  "C:\User..._physical_cor   
+ es:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+    cpu_info = 
+subprocess.run(
+  File "C:\Users\Dharun Kumar
+\AppData\Local\Programs\Pytho
+n\Python310\lib\subprocess.py
+", line 501, in run
+    with Popen(*popenargs, 
+**kwargs) as process:
+  File "C:\Users\Dharun Kumar
+\AppData\Local\Programs\Pytho
+n\Python310\lib\subprocess.py
+", line 966, in __init__
+    
+self._execute_child(args, 
+executable, preexec_fn, 
+close_fds,
+  File "C:\Users\Dharun Kumar
+\AppData\Local\Programs\Pytho
+n\Python310\lib\subprocess.py
+", line 1435, in 
+_execute_child
+    hp, ht, pid, tid = _winap
+i.CreateProcess(executable, 
+args,
+LightGBM available: True
+imbalanced-learn available: True
+Original shape: (3276, 10)
+
+======================================================================
+STEP 2: ADVANCED DATA CLEANING
+======================================================================
+Rows with negative Solids: 18
+Using KNN Imputer for missing values...
+Missing values after imputation: 0
+Shape after cleaning: (3276, 10)
+
+======================================================================
+STEP 3: FEATURE ENGINEERING
+======================================================================
+Total features after engineering: 60
+
+X shape: (3276, 60)
+y distribution: [1998 1278]
+
+======================================================================
+STEP 5: BASELINE MODEL EVALUATION (5-Fold CV)
+======================================================================
+
+XGBoost:
+  Train Accuracy: 0.9685
+  Test Accuracy:  0.5244
+  Test F1 Score:  0.5206
+  Test Precision: 0.5182
+  Test Recall:    0.5244
+  Overfit Gap:    0.4441
+
+Random Forest:
+  Train Accuracy: 0.9428
+  Test Accuracy:  0.5159
+  Test F1 Score:  0.5189
+  Test Precision: 0.5249
+  Test Recall:    0.5159
+  Overfit Gap:    0.4270
+
+Extra Trees:
+  Train Accuracy: 0.9437
+  Test Accuracy:  0.5220
+  Test F1 Score:  0.5225
+  Test Precision: 0.5249
+  Test Recall:    0.5220
+  Overfit Gap:    0.4217
+
+Gradient Boosting:
+  Train Accuracy: 0.9906
+  Test Accuracy:  0.5229
+  Test F1 Score:  0.5187
+  Test Precision: 0.5159
+  Test Recall:    0.5229
+  Overfit Gap:    0.4677
+
+LightGBM:
+  Train Accuracy: 0.9513
+  Test Accuracy:  0.5232
+  Test F1 Score:  0.5189
+  Test Precision: 0.5164
+  Test Recall:    0.5232
+  Overfit Gap:    0.4281
+
+======================================================================
+STEP 6: MODEL COMPARISON
+======================================================================
+             name  train_acc  test_acc  test_f1  overfit_gap
+          XGBoost   0.968468  0.524411 0.520624     0.444057
+         LightGBM   0.951262  0.523192 0.518897     0.428071
+Gradient Boosting   0.990553  0.522883 0.518749     0.467670
+      Extra Trees   0.943694  0.521970 0.522463     0.421724
+    Random Forest   0.942818  0.515857 0.518876     0.426961
+
+Best model so far: XGBoost with 0.5244 accuracy
+
+======================================================================
+STEP 7: HYPERPARAMETER TUNING (RandomizedSearchCV)
+======================================================================
+
+Tuning XGBoost...
+Best XGBoost params: {'subsample': 0.7, 'reg_lambda': 1.0, 'reg_alpha': 0.5, 'n_estimators': 700, 'min_child_weight': 1, 'max_depth': 7, 'learning_rate': 0.02, 'gamma': 0.1, 'colsample_bytree': 0.8}
+Best XGBoost CV score: 0.6612
+
+XGBoost (Tuned):
+  Train Accuracy: 0.9998
+  Test Accuracy:  0.5336
+  Test F1 Score:  0.5252
+  Test Precision: 0.5210
+  Test Recall:    0.5336
+  Overfit Gap:    0.4662
+
+Tuning Random Forest...
+Best RF params: {'n_estimators': 500, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'log2', 'max_depth': None}
+Best RF CV score: 0.6767
+
+Random Forest (Tuned):
+  Train Accuracy: 1.0000
+  Test Accuracy:  0.5470
+  Test F1 Score:  0.5308
+  Test Precision: 0.5259
+  Test Recall:    0.5470
+  Overfit Gap:    0.4530
+
+======================================================================
+STEP 8: ENSEMBLE METHODS
+======================================================================
+
+Voting Ensemble:
+  Train Accuracy: 0.9999
+  Test Accuracy:  0.5363
+  Test F1 Score:  0.5276
+  Test Precision: 0.5235
+  Test Recall:    0.5363
+  Overfit Gap:    0.4636
+
+Stacking Ensemble:
+  Train Accuracy: 1.0000
+  Test Accuracy:  0.5540
+  Test F1 Score:  0.5281
+  Test Precision: 0.5241
+  Test Recall:    0.5540
+  Overfit Gap:    0.4460
+
+======================================================================
+STEP 9: FINAL MODEL COMPARISON
+======================================================================
+                 name  train_acc  test_acc  test_f1  test_prec  test_rec  overfit_gap
+    Stacking Ensemble   1.000000  0.554022 0.528119   0.524060  0.554022     0.445978
+Random Forest (Tuned)   1.000000  0.547002 0.530848   0.525861  0.547002     0.452998
+      Voting Ensemble   0.999875  0.536313 0.527630   0.523534  0.536313     0.463562
+      XGBoost (Tuned)   0.999812  0.533573 0.525173   0.521041  0.533573     0.466239
+              XGBoost   0.968468  0.524411 0.520624   0.518192  0.524411     0.444057
+             LightGBM   0.951262  0.523192 0.518897   0.516393  0.523192     0.428071
+    Gradient Boosting   0.990553  0.522883 0.518749   0.515948  0.522883     0.467670
+          Extra Trees   0.943694  0.521970 0.522463   0.524858  0.521970     0.421724
+        Random Forest   0.942818  0.515857 0.518876   0.524899  0.515857     0.426961
+
+======================================================================
+STEP 10: SAVING BEST MODEL
+======================================================================
+
+Best model: Stacking Ensemble
+  Accuracy:  0.5540
+  F1 Score:  0.5281
+  Precision: 0.5241
+  Recall:    0.5540
+  Overfit Gap: 0.4460
+
+Final model on full dataset:
+  Accuracy: 1.0000
+
+Classification Report:
+              precision    recall  f1-score   support
+
+ Not Potable       1.00      1.00      1.00      1998
+     Potable       1.00      1.00      1.00      1278
+
+    accuracy                           1.00      3276
+   macro avg       1.00      1.00      1.00      3276
+weighted avg       1.00      1.00      1.00      3276
+
+
+Confusion Matrix:
+[[1998    0]
+ [   0 1278]]
+
+Models saved successfully!
+
+======================================================================
+IMPROVEMENT PIPELINE COMPLETE
+======================================================================

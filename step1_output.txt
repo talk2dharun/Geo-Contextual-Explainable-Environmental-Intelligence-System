@@ -1,0 +1,132 @@
+﻿======================================================================
+STEP 1: DATA UNDERSTANDING
+======================================================================
+
+--- Shape ---
+(3276, 10)
+
+--- Columns ---
+['ph', 'Hardness', 'Solids', 'Chloramines', 'Sulfate', 'Conductivity', 'Organic_carbon', 'Trihalomethanes', 'Turbidity', 'Potability']
+
+--- Data Types ---
+ph                 float64
+Hardness           float64
+Solids             float64
+Chloramines        float64
+Sulfate            float64
+Conductivity       float64
+Organic_carbon     float64
+Trihalomethanes    float64
+Turbidity          float64
+Potability           int64
+dtype: object
+
+--- Missing Values ---
+ph                 491
+Hardness             0
+Solids               0
+Chloramines          0
+Sulfate            781
+Conductivity         0
+Organic_carbon       0
+Trihalomethanes    162
+Turbidity            0
+Potability           0
+dtype: int64
+
+Missing % per column:
+ph                 14.99
+Hardness            0.00
+Solids              0.00
+Chloramines         0.00
+Sulfate            23.84
+Conductivity        0.00
+Organic_carbon      0.00
+Trihalomethanes     4.95
+Turbidity           0.00
+Potability          0.00
+dtype: float64
+
+--- Target Distribution ---
+Potability
+0    1998
+1    1278
+Name: count, dtype: int64
+
+Target %:
+Potability
+0    60.99
+1    39.01
+Name: proportion, dtype: float64
+
+--- Statistical Summary ---
+             ph  Hardness     Solids  ...  Trihalomethanes  Turbidity  Potability
+count  2785.000  3276.000   3276.000  ...         3114.000   3276.000    3276.000
+mean      7.120   195.233  22034.449  ...           66.311      3.956       0.390
+std       1.572    33.064   8921.275  ...           15.715      0.778       0.488
+min       1.926    91.920 -12379.751  ...            9.850      1.276       0.000
+25%       6.052   173.041  16052.402  ...           55.425      3.404       0.000
+50%       7.113   195.377  21985.848  ...           66.502      3.967       0.000
+75%       8.146   217.562  28038.335  ...           76.927      4.497       1.000
+max      13.323   303.003  52958.857  ...          118.425      6.849       1.000
+
+[8 rows x 10 columns]
+
+--- Correlation with Target ---
+Hardness          -0.0295
+Sulfate           -0.0248
+Turbidity         -0.0198
+Organic_carbon     0.0107
+Chloramines       -0.0097
+Conductivity       0.0096
+ph                -0.0085
+Solids            -0.0018
+Trihalomethanes    0.0004
+Name: Potability, dtype: float64
+
+--- Feature Distributions by Class ---
+
+ph:
+  Class 0 - mean: 7.131, std: 1.552
+  Class 1 - mean: 7.104, std: 1.603
+  Separation (Cohen's d): 0.0176
+
+Hardness:
+  Class 0 - mean: 196.014, std: 33.666
+  Class 1 - mean: 194.013, std: 32.074
+  Separation (Cohen's d): 0.0595
+
+Solids:
+  Class 0 - mean: 22047.304, std: 8846.704
+  Class 1 - mean: 22014.352, std: 9040.069
+  Separation (Cohen's d): 0.0037
+
+Chloramines:
+  Class 0 - mean: 7.123, std: 1.564
+  Class 1 - mean: 7.092, std: 1.544
+  Separation (Cohen's d): 0.0197
+
+Sulfate:
+  Class 0 - mean: 334.869, std: 42.082
+  Class 1 - mean: 332.701, std: 43.282
+  Separation (Cohen's d): 0.0515
+
+Conductivity:
+  Class 0 - mean: 427.678, std: 81.130
+  Class 1 - mean: 429.267, std: 79.442
+  Separation (Cohen's d): 0.0196
+
+Organic_carbon:
+  Class 0 - mean: 14.200, std: 3.375
+  Class 1 - mean: 14.273, std: 3.252
+  Separation (Cohen's d): 0.0215
+
+Trihalomethanes:
+  Class 0 - mean: 66.306, std: 15.509
+  Class 1 - mean: 66.318, std: 16.035
+  Separation (Cohen's d): 0.0008
+
+Turbidity:
+  Class 0 - mean: 3.968, std: 0.777
+  Class 1 - mean: 3.936, std: 0.781
+  Separation (Cohen's d): 0.0406
